@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+LaFabrica_Frontend/node_modules/
+LaFabrica_Backend/node_modules/
+
+# Environment variables
+.env
+LaFabrica_Frontend/.env
+LaFabrica_Backend/.env
+
+# Vite build output
+LaFabrica_Frontend/dist/
+LaFabrica_Frontend/.vite/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Coverage & testing
+coverage/
+
+# Misc
+*.pem
