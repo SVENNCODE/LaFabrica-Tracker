@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
-/*Responsive Navbar that allows user to click each section of the page, Home, Players, and Contact using links for faster
+/*Responsive Navbar that allows user to click each section of the page, Home and Players using links for faster
 responsive instead of anchor tags uses useState for mobile hamburger menu implementation.
 */
 function Navbar(){
@@ -21,9 +21,6 @@ function Navbar(){
         </Link>
         <Link to ="/Players" className="text-gray-700 hover:text-blue-700 px-3 py-2 font-semibold">
         Players
-        </Link>
-        <Link to ="/Contact" className="text-gray-700 hover:text-blue-700 px-3 py-2 font-semibold">
-        Contact
         </Link>
     </div>
     <div className="md:hidden">
@@ -51,10 +48,6 @@ function Navbar(){
             <Link to="/Players" className=" block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 font-semibold "
             onClick={() => setIsOpen(false)}>
               Players
-            </Link>
-            <Link to="/Contact" className=" block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 font-semibold "
-            onClick={() => setIsOpen(false)}>
-              Contact
             </Link>
           </div>
           </div>    

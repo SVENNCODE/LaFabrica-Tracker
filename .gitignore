@@ -4,7 +4,7 @@ LaFabrica_Frontend/node_modules/
 LaFabrica_Backend/node_modules/
 
 # Environment variables
-.env
+.env.*
 LaFabrica_Frontend/.env
 LaFabrica_Backend/.env
 

@@ -12,7 +12,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Players" element={<Players />} />
             <Route path="/Players/:id" element={<PlayerProfile />} />
-            <Route path="/Contact" element={<h1>Contact Page</h1>} />
           </Routes>
     </BrowserRouter>
   );
