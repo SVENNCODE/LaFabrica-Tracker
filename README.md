@@ -22,7 +22,7 @@ Also all stats and information are based on the official Real Madrid site and Tr
 
 ## Screenshots
 
-![Home page](./screenshots/Homepage.png)
+![Home page](./screenshots/homepage.png)
 ![Players page](./screenshots/PlayersPage.png)
 ![Players profile](./screenshots/PlayerProfile.png)
 ![Scout report](./screenshots/AiScoutReport.png)
