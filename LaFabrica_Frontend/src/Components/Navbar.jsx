@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { container, focusRing } from "./ui";
+import ballImage from "../assets/lafabricaball.jpg";
 
 const links = [
   { to: "/", label: "Home", end: true },
@@ -26,7 +27,7 @@ function Navbar() {
           className={`flex items-center gap-2 rounded-md ${focusRing}`}
         >
           <img
-            src="/assets/lafabricaball.png"
+            src={ballImage}
             alt="La Fabrica"
             className="h-7 w-7 object-contain"
           />

@@ -1,7 +1,7 @@
 "use strict";
 const crypto = require("crypto");
 
-const DEFAULT_MODEL = "llama-3.3-70b-versatile";
+const DEFAULT_MODEL = "openai/gpt-oss-120b";
 const TIMEOUT_MS =
   Number.parseInt(process.env.GROQ_TIMEOUT_MS ?? "", 10) || 20000;
 
@@ -87,7 +87,7 @@ async function generateReport(prompt) {
     completion = await getClient().chat.completions.create({
       model,
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 1000,
+      max_tokens: 2000,
     });
   } catch (err) {
     if (err instanceof ScoutReportError) throw err;
