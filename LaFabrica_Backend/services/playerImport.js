@@ -248,7 +248,6 @@ async function assertMigrated(db) {
   }
 }
 
-// entries: [{ line, values }]  ->  entries with .status, .changes, .playerId
 async function planEntries(db, entries) {
   if (!entries.length) return;
   const selectCols = FIELDS.map((f) =>
@@ -335,8 +334,6 @@ async function applyEntries(client, entries) {
   }
 }
 
-// ---- public entry point ------------------------------------------------------------
-
 async function runImport(pool, buffer, { dryRun = true } = {}) {
   const { text: content, encoding } = decode(buffer);
   const delimiter = sniffDelimiter(content);
@@ -408,14 +405,11 @@ async function runImport(pool, buffer, { dryRun = true } = {}) {
   };
 
   if (dryRun || errors.length) {
-    // Read-only plan so the preview shows what a real import would do.
     await assertMigrated(pool);
     await planEntries(pool, valid);
     return finish(false);
   }
 
-  // Real import: one transaction. The table lock stops two imports (or an import and a
-  // manual insert) racing between "does this player exist?" and the write.
   const client = await pool.connect();
   try {
     await client.query("BEGIN");
